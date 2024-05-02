@@ -1,0 +1,37 @@
+{
+  "vpc-provider:account=382218884119:filter.isDefault=true:region=us-east-2:returnAsymmetricSubnets=true": {
+    "vpcId": "vpc-09a65f35e07db03ea",
+    "vpcCidrBlock": "172.31.0.0/16",
+    "ownerAccountId": "382218884119",
+    "availabilityZones": [],
+    "subnetGroups": [
+      {
+        "name": "Public",
+        "type": "Public",
+        "subnets": [
+          {
+            "subnetId": "subnet-013e193b3e0bd4b1d",
+            "cidr": "172.31.0.0/20",
+            "availabilityZone": "us-east-2a",
+            "routeTableId": "rtb-03441d01952e4ea58"
+          },
+          {
+            "subnetId": "subnet-0e6cbfb0cc03f8910",
+            "cidr": "172.31.16.0/20",
+            "availabilityZone": "us-east-2b",
+            "routeTableId": "rtb-03441d01952e4ea58"
+          },
+          {
+            "subnetId": "subnet-0f91d224d39e45b4e",
+            "cidr": "172.31.32.0/20",
+            "availabilityZone": "us-east-2c",
+            "routeTableId": "rtb-03441d01952e4ea58"
+          }
+        ]
+      }
+    ]
+  },
+  "acknowledged-issue-numbers": [
+    19836
+  ]
+}
