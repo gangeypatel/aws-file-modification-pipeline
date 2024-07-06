@@ -34,8 +34,8 @@ update the Bucket Policy to this
                 "s3:Get*"
             ],
             "Resource": [
-                "arn:aws:s3:::fovus-code-txt-1",
-                "arn:aws:s3:::fovus-code-txt-1/*"
+                "arn:aws:s3:::app-code-txt-1",
+                "arn:aws:s3:::app-code-txt-1/*"
             ]
         }
     ]
