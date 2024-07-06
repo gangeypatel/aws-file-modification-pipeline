@@ -2,9 +2,15 @@ import React from 'react'
 import './../index.css';
 const NavBar = () => {
   return (
-    <div className="navbar bg-base-100 flex justify-center">
-        <h1 className="text-shadow uppercase text-6xl">Fovus coding</h1>
+    <>
+    <div className="navbar bg-base-100 w-50 p-20">
+  <div className="flex-1 justify-center">
+    <div className=" text-bold text-4xl">AWS</div>
+  </div>
+  <div className="flex-none">
+  </div>
 </div>
+</>
   )
 }
 

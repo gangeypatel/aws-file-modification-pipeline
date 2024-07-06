@@ -14,7 +14,7 @@ export class CdkStackStack extends cdk.Stack {
     super(scope, id, props);
       
 
-    const bucket_name = 'fovus-txt-3'
+    const bucket_name = 'app-txt-3'
     // });
     const corsRule = {
       allowedMethods: [s3.HttpMethods.GET,s3.HttpMethods.POST,s3.HttpMethods.PUT,s3.HttpMethods.DELETE],
@@ -25,7 +25,7 @@ export class CdkStackStack extends cdk.Stack {
 
     
     //s3 bucket
-    const bucket = new s3.Bucket(this,'fovus-bucket',{
+    const bucket = new s3.Bucket(this,'app-bucket',{
       bucketName: bucket_name,
       blockPublicAccess : s3.BlockPublicAccess.BLOCK_ALL,
       versioned: false,
@@ -46,9 +46,9 @@ export class CdkStackStack extends cdk.Stack {
 
     //dynamoDB
     //dynamoDB
-    const table = new dynamodb.Table(this, 'fovus-data', {
+    const table = new dynamodb.Table(this, 'app-data', {
       partitionKey: { name: 'id', type: dynamodb.AttributeType.STRING },
-      tableName: 'fovus-data',
+      tableName: 'app-data',
       stream: dynamodb.StreamViewType.NEW_IMAGE,
     });
 
@@ -107,8 +107,8 @@ export class CdkStackStack extends cdk.Stack {
 
 
     //API-Gateway creation for triggering lambda-dynamo-handler
-    const api = new apigateway.RestApi(this, 'fovus-api', {
-      restApiName: 'fovus-api',
+    const api = new apigateway.RestApi(this, 'app-api', {
+      restApiName: 'app-api',
       description: 'API service for interacting with DynamoDB.',
       defaultCorsPreflightOptions: {
         allowOrigins: apigateway.Cors.ALL_ORIGINS,

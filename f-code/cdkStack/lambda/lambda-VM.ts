@@ -2,7 +2,7 @@ const AWS = require("aws-sdk");
 const ec2Client = new AWS.EC2({region: 'us-east-2'}); 
 const dynamoDB = new AWS.DynamoDB({ apiVersion: "2012-08-10" });
 const FILE_NAME = 'script.js'
-const tableName = "fovus-data";
+const tableName = "app-data";
 
 exports.handler = async (event) => {
     console.log("Event: ", JSON.stringify(event, null, 2));
@@ -34,7 +34,7 @@ sudo yum install -y nodejs
 cd /home/ec2-user/
 sudo npm init -y
 sudo npm i aws-sdk@^2.1594.0
-wget https://fovus-code-txt.s3.us-east-2.amazonaws.com/script.js
+wget https://app-code-txt.s3.us-east-2.amazonaws.com/script.js
 sudo node /home/ec2-user/${FILE_NAME} ${reqId}
 sleep 10 && sudo shutdown -h now`)
         };

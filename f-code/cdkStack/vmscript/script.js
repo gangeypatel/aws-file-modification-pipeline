@@ -3,8 +3,8 @@ const reqId = inputArgs[2];
 const AWS = require("aws-sdk");
 AWS.config.update({ region: "us-east-2" });
 const fs = require('fs');
-const tableName = "fovus-data"
-const s3BucketName = "fovus-txt-3"
+const tableName = "app-data"
+const s3BucketName = "app-txt-3"
 
 
 AWS.config.update({
